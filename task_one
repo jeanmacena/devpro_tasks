@@ -1,0 +1,32 @@
+Task 1
+
+
+Test for logging an INFO message:
+
+Input: log_message("application.log", "User logged in", "INFO")
+Expected Output: [Timestamp] [INFO] User logged in should be written to the "application.log" file.
+
+Test for logging a WARNING message:
+
+Input: log_message("application.log", "Failed login attempt", "WARNING")
+Expected Output: [Timestamp] [WARNING] Failed login attempt should be written to the "application.log" file.
+
+Test for logging an ERROR message:
+
+Input: log_message("application.log", "Database connection failed", "ERROR")
+Expected Output: [Timestamp] [ERROR] Database connection failed should be written to the "application.log" file.
+
+Test for logging an empty message:
+
+Input: log_message("application.log", "", "INFO")
+Expected Output: No entry should be written to the log file as the message is empty.
+
+Test for logging with an invalid log level:
+
+Input: log_message("application.log", "Invalid log level test", "DEBUG")
+Expected Output: No entry should be written to the log file as the log level is not valid.
+
+Test for logging to a non-existent log file:
+
+Input: log_message("nonexistent.log", "Logging to non-existent file", "INFO")
+Expected Output: A new file named "nonexistent.log" should be created, and [Timestamp] [INFO] Logging to non-existent file should be written to it.
